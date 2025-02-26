@@ -1,0 +1,94 @@
+{
+  "name": "Requirement Tracker PoC",
+  "displayName": "Requirement Tracker PoC",
+  "description": "",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "requirementsTree.analyze",
+        "title": "Analyze Requirements"
+      },
+      {
+        "command": "requirementsTree.load",
+        "title": "Load Requirements"
+      },
+      {
+        "command": "requirementsTree.filter",
+        "title": "Filter Requirements"
+      },
+      {
+        "command": "requirementsTree.showDetails",
+        "title": "Show requirement details"
+      },
+      {
+        "command": "requirementsTree.analyzeRequirement",
+        "title": "Start requirement analysis",
+        "icon": "$(play)" 
+      },
+      {
+        "command": "requirementsTree.openFileAtLine",
+        "title": "Open File"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "requirementsTreeContainer",
+          "title": "Requirements",
+          "icon": "./media/img/logo.png"
+        }
+      ]
+    },
+    "views": {
+      "requirementsTreeContainer": [
+        {
+          "id": "requirementsSearch",
+          "type": "webview",
+          "name": "Search Requirements"
+        },
+        {
+          "id": "requirementsTree",
+          "type": "tree",
+          "name": "Requirements"
+        }
+      ]
+    },
+    "menus": {
+    "view/item/context": [
+      {
+        "command": "requirementsTree.analyzeRequirement",
+        "when": "view == requirementsTree && viewItem == requirement",
+        "group": "inline"
+      }
+    ]
+  }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.95.0",
+    "@types/mocha": "^10.0.9",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^8.10.0",
+    "@typescript-eslint/parser": "^8.7.0",
+    "eslint": "^9.13.0",
+    "typescript": "^5.6.3",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1"
+  }
+}

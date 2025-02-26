@@ -1,0 +1,11 @@
+ID$Requirement$File$Range
+REQ-001$"La funzione deve calcolare e stampare i primi n numeri di Fibonacci."$"file.c"$"5-15"
+REQ-002$"La funzione deve calcolare il fattoriale di un numero dato."$"file.c"$"18-21"
+REQ-003$"La funzione deve determinare se un numero dato è un numero primo."$"file.c"$"24-30"
+REQ-004$"La funzione deve stampare tutti i numeri primi minori o uguali a un numero dato."$"file.c"$"33-41"
+REQ-005$"La funzione deve calcolare la somma di tutti gli elementi di un array."$"file.c"$"44-50"
+REQ-006$"La funzione deve trovare l'elemento massimo in un array."$"file.c"$"53-61"
+REQ-007$"La funzione deve invertire una stringa data."$"file.c"$"64-75"
+REQ-008$"La funzione deve calcolare il minimo comune multiplo di due numeri."$"file.c"$"78-86"
+REQ-009$"La funzione deve calcolare il massimo comun divisore di due numeri."$"file.c"$"89-92"
+REQ-010$"La funzione deve generare e stampare una matrice non identita' di dimensione m x n."$"file.c"$"95-104"
