@@ -1,10 +1,12 @@
+const config = require('../config.json');
+
 type RequirementRequest = {
     requirement: string;
     id: string;
     code: string;
 };
 
-const apiUrl = 'http://localhost:4000/api/ollama/analyzeRequirement';
+const apiUrl = config.apiUrl + '/analyzeRequirement';
 
 async function analyzeRequirement(body: RequirementRequest): Promise<any> {
     try {

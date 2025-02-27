@@ -1,5 +1,7 @@
-const requirementModel = 'llama3.2:3b';
-const codeModel = 'llama3.2:3b';
+const config = require('../../config.json')
+
+const requirementModel = config.requirementModel;
+const codeModel = config.codeModel;
 
 const requirementContext = `Analizza il seguente requisito software e valuta la sua semantica.
     Rispondi esclusivamente con un file JSON nel seguente formato json valido:

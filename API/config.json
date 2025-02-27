@@ -1,0 +1,5 @@
+{
+    "requirementModel": "llama3.2:3b",
+    "codeModel": "llama3.2:3b"
+  }
+  

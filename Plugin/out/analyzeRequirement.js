@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const apiUrl = 'http://localhost:4000/api/ollama/analyzeRequirement';
+const config = require('../config.json');
+const apiUrl = config.apiUrl + '/analyzeRequirement';
 async function analyzeRequirement(body) {
     try {
         const response = await fetch(apiUrl, {
