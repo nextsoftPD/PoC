@@ -1,9 +1,9 @@
-const config = require('../../config.json')
+import config from '../../config.json';
 
-const requirementModel = config.requirementModel;
-const codeModel = config.codeModel;
+const requirementModel: string = config.requirementModel;
+const codeModel: string = config.codeModel;
 
-const requirementContext = `Analizza il seguente requisito software e valuta la sua semantica.
+const requirementContext: string = `Analizza il seguente requisito software e valuta la sua semantica.
     Rispondi esclusivamente con un file JSON nel seguente formato json valido:
         {
             "passed": <true/false>,
@@ -23,8 +23,7 @@ const requirementContext = `Analizza il seguente requisito software e valuta la 
     Non includere backtick, triple backtick, code fence, né testo aggiuntivo. Rispondi esclusivamente con JSON valido.
     Requisito:`;
 
-
-const codeContext = `Analizza il seguente requisito software e il codice associato per verificare se il codice soddisfa il requisito. 
+const codeContext: string = `Analizza il seguente requisito software e il codice associato per verificare se il codice soddisfa il requisito. 
     Rispondi esclusivamente con un file JSON nel seguente formato json valido:
     {
         "quality_score": <0-100>,
@@ -50,13 +49,7 @@ const codeContext = `Analizza il seguente requisito software e il codice associa
    
     Non includere backtick, triple backtick, code fence, né testo aggiuntivo. Rispondi esclusivamente con JSON valido.`;
 
-const codePrompt = (requirement, code) => `REQUISITO: "${requirement}" \n CODICE: "${code}" `;
+const codePrompt = (requirement: string, code: string): string =>
+  `REQUISITO: "${requirement}" \n CODICE: "${code}" `;
 
-module.exports = {
-    requirementModel,
-    requirementContext,
-    codeModel,
-    codeContext,
-    codePrompt,
-};
-
+export { requirementModel, requirementContext, codeModel, codeContext, codePrompt };
